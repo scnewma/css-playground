@@ -1,0 +1,25 @@
+:root {
+  --bg: #ccc;
+  --mouse-x: 0;
+  --mouse-y: 0;
+  --mouse-tracker-bg: #fff;
+  --mouse-tracker-opacity: .25;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--bg);
+}
+
+.mouse-tracker {
+  --size: 50;
+  position: absolute;
+  top: calc((var(--mouse-y) - (var(--size) / 2) + 5) * 1px);
+  left: calc((var(--mouse-x) - (var(--size) / 2) + 3) * 1px);
+  background-color: var(--mouse-tracker-bg);
+  opacity: var(--mouse-tracker-opacity);
+  border-radius: 100%;
+  width: calc(var(--size) * 1px);
+  height: calc(var(--size) * 1px);
+}
